@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState, useEffect } from 'react';
-import logo from '../../assets/genomaclabslogo.jpg';
+import logo from '../../assets/genomaclabs.png';
 import sign1 from '../../assets/sign1.png';
 import sign2 from '../../assets/glabsSign.png';
 // import usa from "../../assets/usa.png";
