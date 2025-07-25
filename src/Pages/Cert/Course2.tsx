@@ -120,7 +120,7 @@ export default function Course2({
                                 </p>
 
                                 <div className="flex justify-between items-end mt-5 relative">
-                                    <div className="w-[60px]">
+                                    <div className="w-[60px] -mt-10">
                                         <img src={barcode} alt="barcode" className="w-full" />
                                     </div>
 
@@ -131,23 +131,23 @@ export default function Course2({
 
                                     <div className="flex-1 flex justify-between px-6">
                                         <div className="text-center">
-                                            <div className="border-b-2 border-purple-800 w-[200px] pb-3">
+                                            <div className="border-b-2 border-purple-800 w-[200px] -mt-5">
                                                 <img
                                                     src={sign1}
                                                     alt="signature"
-                                                    className="w-[180px] h-[60px] object-contain mx-auto"
+                                                    className="w-[200px] h-[150px] object-contain mx-auto -mb-10"
                                                 />
                                             </div>
-                                            <p className="font-bold text-base mt-2">{signatoryName1}</p>
+                                            <p className="font-bold text-base text-left mt-2">{signatoryName1}</p>
                                             <p className="text-sm text-gray-700 font-medium">{signatoryTitle1}</p>
                                         </div>
 
                                         <div className="text-center">
-                                            <div className="border-b-2 border-purple-800 w-[200px] pb-3">
+                                            <div className="border-b-2 border-purple-800 w-[200px] pb-3 -mt-5 ">
                                                 <img
                                                     src={sign2}
                                                     alt="signature"
-                                                    className="w-[180px] h-[60px] object-contain mx-auto"
+                                                    className="w-[200px] h-[150px] object-contain mx-auto -mb-12"
                                                 />
                                             </div>
                                             <p className="font-bold text-base mt-2">{signatoryName2}</p>
