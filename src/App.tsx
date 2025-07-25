@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<One />} />
           <Route path="/course1" element={<Course1 />} />
-          <Route path="/course2" element={<Course2 header="Certificate of Completion" courseTitle="," date="21st - 24th July 2025" />} />
+          <Route path="/course2" element={<Course2 header="Certificate of Completion" courseTitle="Genomics of Infectious Diseases for Clinical and Public Health" date="21st - 24th July 2025" />} />
           <Route path="/genomac-labs" element={<GenomacLabs />} />
         </Routes>
       </BrowserRouter>

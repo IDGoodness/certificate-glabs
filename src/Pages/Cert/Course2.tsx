@@ -29,8 +29,8 @@ interface Course2Props {
 
 export default function Course2({
     header = "Certificate of Completion",
-    courseTitle = ",",
-    description = "For successfully completing the 4-Day Workshop in Genomics of Infectious Diseases for Clinical and Public Health",
+    courseTitle = "Genomics of Infectious Diseases for Clinical and Public Health",
+    description = "For successfully completing the 4-Day Workshop in ",
     date = "21st - 24th July 2025",
     // recipientName = "Student Name",
     // isPreview = false,
@@ -92,7 +92,7 @@ export default function Course2({
                         </div>
 
                         <div className="w-[800px] h-[600px] relative bg-white">
-                            <img src={watermark} alt="genes" className='absolute w-[800px] h-[600px] opacity-20 z-0 object-cover' />
+                            <img src={watermark} alt="genes" className='absolute w-[800px] h-[600px] opacity-15 z-0 object-cover' />
                             <div className="w-[800px] h-[600px] p-6 relative z-10">
                                 <div className="p-4 bg-purple-900 text-white text-3xl text-center tracking-widest uppercase">
                                     {header || "CERTIFICATE OF Participation"}
