@@ -33,7 +33,7 @@ export default function Course2({
     description = "For successfully completing the 4-Day Workshop in Genomics of Infectious Diseases for Clinical and Public Health",
     date = "21st - 24th July 2025",
     // recipientName = "Student Name",
-    isPreview = false,
+    // isPreview = false,
     organizationName = "Genomac Labs.",
     signatoryName1 = "Oluwaseyi Abraham Olawale",
     signatoryTitle1 = "Founder & CEO of Genomac Holdings.",
@@ -72,8 +72,8 @@ export default function Course2({
     }, [formData.name]);
 
     return (
-        <div className="min-w-[1000px] flex justify-center items-center" >
-            <div ref={ref} className="flex flex-col justify-center items-center bg-white relative" >
+        <div className="min-w-[1000px] flex flex-col justify-center items-center" >
+            <div ref={ref} className="flex flex-col mt-5 justify-center items-center mx-auto bg-white relative" >
                 <div className="relative w-[1000px] h-[600px] flex overflow-hidden z-10">
                         <div className="bg-gradient-to-b from-pink-400 via-purple-900 to-purple-900 w-[200px] h-[600px] flex flex-col">
                             <div className="flex pt-4">
@@ -81,12 +81,12 @@ export default function Course2({
                                     <img src={logo} alt="logo2" className="w-20" />
                                 </div>
                             </div>
-                            <div className="px-2 -mt-1">
-                                <p className="text-white text-center text-[11px] font-medium">
+                            <div className="px-2 mt-1">
+                                <p className="text-white text-center text-[13px] font-medium">
                                     {organizationName}
                                 </p>
-                                <p className="text-white text-center font-thin text-[7px]">
-                                    ...discovering new things, improving life
+                                <p className="text-white text-center font-thin text-[10px]">
+                                    Predict. Prevent. Personalize.
                                 </p>
                             </div>
                         </div>
@@ -115,11 +115,11 @@ export default function Course2({
                                     Organized by Genomac Labs.
                                 </p>
 
-                                <p className="font-bold mx-auto text-center w-[300px] uppercase text-lg">
+                                <p className="font-bold mx-auto text-center w-[300px] -mt-10 uppercase text-lg">
                                     {date}
                                 </p>
 
-                                <div className="flex justify-between items-end mt-16 relative">
+                                <div className="flex justify-between items-end mt-5 relative">
                                     <div className="w-[60px]">
                                         <img src={barcode} alt="barcode" className="w-full" />
                                     </div>
@@ -159,16 +159,15 @@ export default function Course2({
                         </div>
                 </div>
             </div>
-            {!isPreview && (
-                <div className="flex justify-center -mt-9">
-                    <button
-                        className="bg-purple-600 p-2 rounded-xl hover:bg-purple-700 text-white z-10"
-                        onClick={onDownloadClick}
-                    >
-                        Download Certificate
-                    </button>
-                </div>
-            )}
+            
+            <div className="flex justify-center mt-1">
+                <button
+                    className="bg-purple-600 p-2 rounded-xl hover:bg-purple-700 text-white z-10"
+                    onClick={onDownloadClick}
+                >
+                    Download Certificate
+                </button>
+            </div>
         </div>
     );
 }
