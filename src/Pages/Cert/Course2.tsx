@@ -40,7 +40,6 @@ export default function Course2({
     signatoryName2 = "Blessing Afolabi",
     signatoryTitle2 = "Director, Genomac Labs"
 }: Course2Props) {
-    const ref = useRef<HTMLDivElement>(null);
 
     const [formData, setFormData] = useState({
             name: '',
@@ -52,9 +51,10 @@ export default function Course2({
             name: storedName || '',
             });
         }, []);
-    
 
-    const onDownloadClick = useCallback(() => {
+    const ref = useRef(null);
+
+    const onButtonClick = useCallback(() => {
         if (ref.current === null) {
             return;
         }
@@ -62,18 +62,21 @@ export default function Course2({
         toPng(ref.current, { cacheBust: true })
             .then((dataUrl) => {
                 const link = document.createElement('a');
-                link.download = `${formData.name?.replace(/\s+/g, '-').toLowerCase()}.png`;
+                link.download = "my-certificate.png";
                 link.href = dataUrl;
                 link.click();
             })
             .catch(() => {
                 alert("An error occurred while generating your certificate. Please try again.");
             });
-    }, [formData.name]);
+    }, [ref]);
+    
+    
+
 
     return (
-        <div className="min-w-[1000px] flex flex-col justify-center items-center" >
-            <div ref={ref} className="flex flex-col mt-5 justify-center items-center mx-auto bg-white relative" >
+        <div className="min-w-[1000px] flex flex-col justify-center items-center min-h-screen " >
+            <div ref={ref} className="flex flex-col justify-center items-center bg-white relative" >
                 <div className="relative w-[1000px] h-[600px] flex overflow-hidden z-10">
                         <div className="bg-gradient-to-b from-pink-400 via-purple-900 to-purple-900 w-[200px] h-[600px] flex flex-col">
                             <div className="flex pt-4">
@@ -163,7 +166,7 @@ export default function Course2({
             <div className="flex justify-center mt-1">
                 <button
                     className="bg-purple-600 p-2 rounded-xl hover:bg-purple-700 text-white z-10"
-                    onClick={onDownloadClick}
+                    onClick={onButtonClick}
                 >
                     Download Certificate
                 </button>
